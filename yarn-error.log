@@ -1,5 +1,5 @@
 Arguments: 
-  /snap/node/7382/bin/node /usr/share/yarn/bin/yarn.js add @types/express-async-errors @types/cookie-parser @types/connect-mongodb-session @types/express-async-handler @types/express-mongo-sanitize @types/express-session @types/express-validator @types/helmet @types/http-status-codes @types/xss-clean -D
+  /snap/node/7382/bin/node /usr/share/yarn/bin/yarn.js add @types/xss-clean --dev
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/home/beau/.local/bin:/snap/bin:/snap/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/home/beau/.local/bin:/snap/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fexpress-async-errors: Not found
+  Error: https://registry.yarnpkg.com/@types%2fxss-clean: Not found
       at params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66145:18)
       at self.callback (/usr/share/yarn/lib/cli.js:140890:22)
       at Request.emit (node:events:513:28)
@@ -70,9 +70,15 @@ npm manifest:
       "@types/bcrypt": "^5.0.0",
       "@types/body-parser": "^1.19.2",
       "@types/config": "^3.3.0",
+      "@types/connect-mongodb-session": "^2.4.4",
+      "@types/cookie-parser": "^1.4.3",
       "@types/cors": "^2.8.13",
       "@types/dotenv": "^8.2.0",
       "@types/express": "^4.17.17",
+      "@types/express-mongo-sanitize": "^2.1.0",
+      "@types/express-session": "^1.17.7",
+      "@types/express-validator": "^3.0.0",
+      "@types/helmet": "^4.0.0",
       "@types/jsonwebtoken": "^9.0.2",
       "@types/lodash": "^4.14.194",
       "@types/mongoose": "^5.11.97",
@@ -950,12 +956,27 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/config/-/config-3.3.0.tgz#2b632cb37c639bf8d57054561f5a77d31dcebc1e"
     integrity sha512-9kZSbl3/X3TVNowLCu5HFQdQmD+4287Om55avknEYkuo6R2dDrsp/EXEHUFvfYeG7m1eJ0WYGj+cbcUIhARJAQ==
   
+  "@types/connect-mongodb-session@^2.4.4":
+    version "2.4.4"
+    resolved "https://registry.yarnpkg.com/@types/connect-mongodb-session/-/connect-mongodb-session-2.4.4.tgz#e4fdc0fee07d27b1b1111df548e3f620d5511ea8"
+    integrity sha512-hHU/gqE09F1Tjm86hTK9VC2MzWjh4XD+fsQMb6oaAcIWi4Mutgr9JepeUdl9Tsoj13shlDLP5ljm7IGlFrcOrQ==
+    dependencies:
+      "@types/express-session" "*"
+      mongodb "^4.5.0"
+  
   "@types/connect@*":
     version "3.4.35"
     resolved "https://registry.yarnpkg.com/@types/connect/-/connect-3.4.35.tgz#5fcf6ae445e4021d1fc2219a4873cc73a3bb2ad1"
     integrity sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==
     dependencies:
       "@types/node" "*"
+  
+  "@types/cookie-parser@^1.4.3":
+    version "1.4.3"
+    resolved "https://registry.yarnpkg.com/@types/cookie-parser/-/cookie-parser-1.4.3.tgz#3a01df117c5705cf89a84c876b50c5a1fd427a21"
+    integrity sha512-CqSKwFwefj4PzZ5n/iwad/bow2hTCh0FlNAeWLtQM3JA/NX/iYagIpWG2cf1bQKQ2c9gU2log5VUCrn7LDOs0w==
+    dependencies:
+      "@types/express" "*"
   
   "@types/cors@^2.8.13":
     version "2.8.13"
@@ -971,6 +992,13 @@ Lockfile:
     dependencies:
       dotenv "*"
   
+  "@types/express-mongo-sanitize@^2.1.0":
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/@types/express-mongo-sanitize/-/express-mongo-sanitize-2.1.0.tgz#e0ac0db7aaf35d27375dcb4b5684c786322f6cf5"
+    integrity sha512-m0JsxN7Jwlo/S4TjaHewmRs392QeQ9ATconFNxxV+y349/e7tsQA/LiCThjSoETV+xiM5fwVvwWV8474OKJ+ig==
+    dependencies:
+      express-mongo-sanitize "*"
+  
   "@types/express-serve-static-core@^4.17.33":
     version "4.17.35"
     resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.35.tgz#c95dd4424f0d32e525d23812aa8ab8e4d3906c4f"
@@ -981,7 +1009,21 @@ Lockfile:
       "@types/range-parser" "*"
       "@types/send" "*"
   
-  "@types/express@^4.17.17":
+  "@types/express-session@*", "@types/express-session@^1.17.7":
+    version "1.17.7"
+    resolved "https://registry.yarnpkg.com/@types/express-session/-/express-session-1.17.7.tgz#ced215c1244cb594be10e39f2781ddcd650be9a6"
+    integrity sha512-L25080PBYoRLu472HY/HNCxaXY8AaGgqGC8/p/8+BYMhG0RDOLQ1wpXOpAzr4Gi5TGozTKyJv5BVODM5UNyVMw==
+    dependencies:
+      "@types/express" "*"
+  
+  "@types/express-validator@^3.0.0":
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/@types/express-validator/-/express-validator-3.0.0.tgz#e6f3cab842e5ae376a1cfa11295202ec380b68d1"
+    integrity sha512-LusnB0YhTXpBT25PXyGPQlK7leE1e41Vezq1hHEUwjfkopM1Pkv2X2Ppxqh9c+w/HZ6Udzki8AJotKNjDTGdkQ==
+    dependencies:
+      express-validator "*"
+  
+  "@types/express@*", "@types/express@^4.17.17":
     version "4.17.17"
     resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.17.tgz#01d5437f6ef9cfa8668e616e13c2f2ac9a491ae4"
     integrity sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==
@@ -990,6 +1032,13 @@ Lockfile:
       "@types/express-serve-static-core" "^4.17.33"
       "@types/qs" "*"
       "@types/serve-static" "*"
+  
+  "@types/helmet@^4.0.0":
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/@types/helmet/-/helmet-4.0.0.tgz#af7af46de26abe368b85360769ae9938bfb2318a"
+    integrity sha512-ONIn/nSNQA57yRge3oaMQESef/6QhoeX7llWeDli0UZIfz8TQMkfNPTXA8VnnyeA1WUjG2pGqdjEIueYonMdfQ==
+    dependencies:
+      helmet "*"
   
   "@types/jsonwebtoken@^9.0.2":
     version "9.0.2"
@@ -1627,7 +1676,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/express-async-handler/-/express-async-handler-1.2.0.tgz#ffc9896061d90f8d2e71a2d2b8668db5b0934391"
     integrity sha512-rCSVtPXRmQSW8rmik/AIb2P0op6l7r1fMW538yyvTMltCO4xQEWMmobfrIxN2V1/mVrgxB8Az3reYF6yUZw37w==
   
-  express-mongo-sanitize@^2.2.0:
+  express-mongo-sanitize@*, express-mongo-sanitize@^2.2.0:
     version "2.2.0"
     resolved "https://registry.yarnpkg.com/express-mongo-sanitize/-/express-mongo-sanitize-2.2.0.tgz#c8c2d45e137f213950f70bf586704e0db5cfe356"
     integrity sha512-PZBs5nwhD6ek9ZuP+W2xmpvcrHwXZxD5GdieX2dsjPbAbH4azOkrHbycBud2QRU+YQF1CT+pki/lZGedHgo/dQ==
@@ -1646,7 +1695,7 @@ Lockfile:
       safe-buffer "5.2.1"
       uid-safe "~2.1.5"
   
-  express-validator@^7.0.1:
+  express-validator@*, express-validator@^7.0.1:
     version "7.0.1"
     resolved "https://registry.yarnpkg.com/express-validator/-/express-validator-7.0.1.tgz#435fac6b5fa838763f78eca05d2206317b92106e"
     integrity sha512-oB+z9QOzQIE8FnlINqyIFA8eIckahC6qc8KtqLdLJcU3/phVyuhXH3bA4qzcrhme+1RYaCSwrq+TlZ/kAKIARA==
@@ -1876,7 +1925,7 @@ Lockfile:
     dependencies:
       function-bind "^1.1.1"
   
-  helmet@^7.0.0:
+  helmet@*, helmet@^7.0.0:
     version "7.0.0"
     resolved "https://registry.yarnpkg.com/helmet/-/helmet-7.0.0.tgz#ac3011ba82fa2467f58075afa58a49427ba6212d"
     integrity sha512-MsIgYmdBh460ZZ8cJC81q4XJknjG567wzEmv46WOBblDb6TUd3z8/GhgmsM9pn8g2B80tAJ4m5/d3Bi1KrSUBQ==
@@ -2178,7 +2227,7 @@ Lockfile:
       "@types/whatwg-url" "^8.2.1"
       whatwg-url "^11.0.0"
   
-  mongodb@4.x:
+  mongodb@4.x, mongodb@^4.5.0:
     version "4.16.0"
     resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-4.16.0.tgz#8b0043de7b577c6a7e0ce44a2ca7315b9c0a7927"
     integrity sha512-0EB113Fsucaq1wsY0dOhi1fmZOwFtLOtteQkiqOXGklvWMnSH3g2QS53f0KTP+/6qOkuoXE2JksubSZNmxeI+g==

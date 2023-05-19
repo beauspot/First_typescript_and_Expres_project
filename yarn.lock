@@ -848,11 +848,6 @@
     "@types/connect" "*"
     "@types/node" "*"
 
-"@types/config@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@types/config/-/config-3.3.0.tgz#2b632cb37c639bf8d57054561f5a77d31dcebc1e"
-  integrity sha512-9kZSbl3/X3TVNowLCu5HFQdQmD+4287Om55avknEYkuo6R2dDrsp/EXEHUFvfYeG7m1eJ0WYGj+cbcUIhARJAQ==
-
 "@types/connect-mongodb-session@^2.4.4":
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/@types/connect-mongodb-session/-/connect-mongodb-session-2.4.4.tgz#e4fdc0fee07d27b1b1111df548e3f620d5511ea8"
@@ -1348,13 +1343,6 @@ concurrently@^8.0.1:
     supports-color "^8.1.1"
     tree-kill "^1.2.2"
     yargs "^17.7.1"
-
-config@^3.3.9:
-  version "3.3.9"
-  resolved "https://registry.yarnpkg.com/config/-/config-3.3.9.tgz#27fae95b43e0e1d5723e54143c090954d8e49572"
-  integrity sha512-G17nfe+cY7kR0wVpc49NCYvNtelm/pPy8czHoFkAgtV1lkmcp7DHtWCdDu+C9Z7gb2WVqa9Tm3uF9aKaPbCfhg==
-  dependencies:
-    json5 "^2.2.3"
 
 connect-mongodb-session@^3.1.1:
   version "3.1.1"
@@ -1946,11 +1934,6 @@ joycon@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/joycon/-/joycon-3.1.1.tgz#bce8596d6ae808f8b68168f5fc69280996894f03"
   integrity sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==
-
-json5@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
-  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 jsonwebtoken@^9.0.0:
   version "9.0.0"
